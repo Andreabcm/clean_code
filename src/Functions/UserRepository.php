@@ -10,4 +10,9 @@ class UserRepository
     {
         return User::create($userData);
     }
+
+    public function getAll()
+    {
+        return User::all();
+    }
 }
