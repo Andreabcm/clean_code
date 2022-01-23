@@ -1,22 +1,5 @@
 <?php
-
-//Evitar tipos de datos
-
-$arrayUsuarios = array("Manuel", "Maria", "Marta");
-
-$stringTitulo = "El principito";
-
-
-
-
-//Evitar números mágicos
-
-$valor1 = "casa";
-
-
-
-
-/* 
+/*
     Valorar diferentes alternativas
     Descriptivos
     Mismo idioma
@@ -25,20 +8,45 @@ $valor1 = "casa";
     PSR-2
  */
 
+// ## Variables ##
 
+// Malas practicas
+//Evitar tipos de datos
+$arrayUsuarios = array("Manuel", "Maria", "Marta");
+$stringTitulo = "El principito";
 
+//Evitar números mágicos
+$valor1 = "casa";
 
-/* 
-    Nombrando a los Controllers: singular, sin espacios y PascalCase
-    Nombrando a los Métodos: camelCase 
+// Evitar letras
+$a = 15;
+
+/*
+    Buenas practicas:
     Nombrando a las Variables: camelCase
+    booleans: añadir el prefijo "is" al nombre de variable
+    Constantes:utilizar mayúsculas y guion bajo
 */
+$usuariosRegistrados = [];
+$isMember = true;
+$PRECIO_BASE = 15;
 
-class UserController
-{
-    public function getAll($allPosts)
-    {
+ // ## Funciones ##
+ /*
+    Nombrando a los Métodos: camelCase
+    Verb(Do What?) + Noun(To What?)  = Result
+    Ej:
+    load + CustomerDetails = loadCustomerDetails();
+    set + Price = setPrice()
+ */
 
+class ejemplo {
+    public function loadCustomerDetails() {
+       //
+    }
+
+    public function setPrice() {
+        //
     }
 }
 
@@ -46,4 +54,16 @@ class UserController
 
 
 
+// ## Classes ##
+/*
+    Siempre PascalCase: Ej: User, Estudiante, UserRepository
+    Nombrando a los Controllers: singular, sin espacios y PascalCase
+*/
 
+class UserController
+{
+    public function getAllPosts($allPosts)
+    {
+
+    }
+}
